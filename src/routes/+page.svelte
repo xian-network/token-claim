@@ -3,7 +3,14 @@
 	import { Toasts } from 'svoast';
 	import { getAddress } from "viem";
 	 
-	import { storeBscAddress, storeIsParticipant, storeCurrentPageIndex, storeERC1193Provider, storePages, storeParticipantTokens } from '$lib/store';
+	import { 
+		storeBscAddress, 
+		storeIsParticipant, 
+		storeCurrentPageIndex, 
+		storeERC1193Provider, 
+		storePages, 
+		storeParticipantTokens 
+	} from '$lib/store';
 	import onboard from '$lib/web3-onboard';
 	import type { IWalletInfo } from "$lib/xian-dapp-interface"
 	import XianWalletUtils from "$lib/xian-dapp-utils";
@@ -14,10 +21,10 @@
 
 	onMount(async ()=>{
         XianWalletUtils.init('https://testnet.xian.org');
-		//@ts-ignore
+        //@ts-ignore
         const info: IWalletInfo = await XianWalletUtils.requestWalletInfo()
 		.catch(handleWalletError);
-        handleWalletInfo(info);
+		handleWalletInfo(info);
     });
 
 	afterUpdate(()=>{
@@ -46,8 +53,6 @@
 	})
 
 </script>
-
-
 
 <main class="main">
 	<Toasts position="top-center"/>
