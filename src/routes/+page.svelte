@@ -8,7 +8,7 @@
 	import type { IWalletInfo } from "$lib/xian-dapp-interface"
 	import XianWalletUtils from "$lib/xian-dapp-utils";
 	import { handleWalletError, handleWalletInfo } from '$lib/xian-handles';
-    import { isPrivateSaleParticipant, PrivateSaleParticipantTokenAmount } from '$lib/action';
+	import { isPrivateSaleParticipant, PrivateSaleParticipantTokenAmount } from '$lib/action';
 
 	$: currentPage = $storePages[$storeCurrentPageIndex];
 
