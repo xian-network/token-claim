@@ -14,7 +14,7 @@ pnpm install
 ```
 
 create `.env` file at the root of the clone folder and add database path
-NOTE: it is advisable to put db file in lib/server of sveltekit project
+> NOTE: it is advisable to put db file in lib/server of sveltekit project
 ```
 DB_PATH=src/lib/server/the.db
 ```
