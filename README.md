@@ -3,6 +3,7 @@
 a website for verifying your participation in token sale
 
 # requirement
+
 `pnpm v9.x` | follow instructions [here](https://pnpm.io/installation) to install pnpm
 
 # usage
@@ -14,7 +15,9 @@ pnpm install
 ```
 
 create `.env` file at the root of the clone folder and add database path
+
 > NOTE: it is advisable to put db file in lib/server of sveltekit project
+
 ```
 DB_PATH=src/lib/server/the.db
 ```

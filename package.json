@@ -15,10 +15,10 @@
         "lint": "prettier --check .",
         "format": "prettier --write ."
     },
-    "pnpm":{
+    "pnpm": {
         "overrides": {
             "intl-messageformat": "10.5.3",
-            "crypto-es": ">=2.1.0", 
+            "crypto-es": ">=2.1.0",
             "ws": ">=8.17.1"
         }
     },
