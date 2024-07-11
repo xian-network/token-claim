@@ -1,0 +1,1 @@
+ALTER TABLE `participants` ADD `time_of_signing` text;
