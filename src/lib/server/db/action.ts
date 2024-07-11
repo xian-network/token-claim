@@ -90,10 +90,12 @@ export const recordData = async (
 
     if (isElegible) {
         if (_isNotSigned) {
+            const now = new Date();
             await db
                 .update(participantTable)
                 .set({
                     xianAddress: xianWallet,
+                    timeOfSigning: now.toUTCString(),
                     signature: signature,
                     agreedToTerms: agreedToTerms,
                 })
