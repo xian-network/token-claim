@@ -3,7 +3,7 @@
 a website for verifying your participation in token sale
 
 # requirement
-`pnpm v9.x` | follow instructions (here)[https://pnpm.io/installation] to install pnpm
+`pnpm v9.x` | follow instructions [here](https://pnpm.io/installation) to install pnpm
 
 # usage
 
