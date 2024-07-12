@@ -2,6 +2,7 @@ import { eq, isNull, sql } from "drizzle-orm";
 import { verifyMessage } from "viem";
 
 import { db } from "./db";
+import { logErrorToFile } from "./logging";
 import { participantTable } from "./schema";
 
 
@@ -11,8 +12,9 @@ export const isParticipant = async (truncWallet: string): Promise<boolean> => {
         .from(participantTable)
         .where(eq(participantTable.bscAddress, truncWallet))
         .limit(1)
-        .catch((err) => {
-            throw err;
+        .catch(async(err) => {
+            await logErrorToFile(err);
+            return [];
         });
 
     if (result.length === 0) {
@@ -32,8 +34,9 @@ export const participantTokenAmount = async (
         .from(participantTable)
         .where(eq(participantTable.bscAddress, truncWallet))
         .limit(1)
-        .catch((err) => {
-            throw err;
+        .catch(async(err) => {
+            await logErrorToFile(err);
+            return [];
         });
 
     return result;
@@ -47,8 +50,9 @@ export const isNotSigned = async (truncWallet: string): Promise<boolean> => {
         .from(participantTable)
         .where(eq(participantTable.bscAddress, truncWallet))
         .limit(1)
-        .catch((err) => {
-            throw err;
+        .catch(async(err) => {
+            await logErrorToFile(err);
+            return [];
         });
 
     const isSignatureNull = result[0]?.isSignatureNull ?? true;
@@ -69,8 +73,9 @@ const verifySignature = async (
         address: bscWallet,
         message,
         signature,
-    }).catch((err) => {
-        throw err;
+    }).catch(async(err) => {
+        await logErrorToFile(err);
+        return false;
     });
 };
 
@@ -80,11 +85,12 @@ export const recordData = async (
     signature: `0x${string}`,
     agreedToTerms: string,
 ): Promise<string | undefined> => {
-    await verifySignature(bscWallet, xianWallet, signature);
+    const isOwnerOfBscWallet = await verifySignature(bscWallet, xianWallet, signature);
+    if(!isOwnerOfBscWallet) return "user is not owner of wallet";
 
     const truncAddress = bscWallet.slice(0, 10) + "..." + bscWallet.slice(-9);
 
-    if (agreedToTerms === "disagree") throw "participant do not agree to terms";
+    if (agreedToTerms === "disagree") return "participant do not agree to terms";
 
     const isElegible = await isParticipant(truncAddress);
 
@@ -102,9 +108,9 @@ export const recordData = async (
                     agreedToTerms: agreedToTerms,
                 })
                 .where(eq(participantTable.bscAddress, truncAddress))
-
-                .catch((err) => {
-                    throw err;
+                .catch(async(err) => {
+                    await logErrorToFile(err);
+                    return "signing unsuccessful";
                 });
             return "signing successfull";
         } else {
