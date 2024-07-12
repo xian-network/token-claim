@@ -1,7 +1,9 @@
-import { db } from "./db";
 import { eq, isNull, sql } from "drizzle-orm";
-import { participantTable } from "./schema";
 import { verifyMessage } from "viem";
+
+import { db } from "./db";
+import { participantTable } from "./schema";
+
 
 export const isParticipant = async (truncWallet: string): Promise<boolean> => {
     const result = await db
