@@ -1,15 +1,26 @@
 import "dotenv/config";
-import { writeFile } from 'fs/promises';
+import { writeFile } from "fs/promises";
 
-export const logErrorToFile = async (error: string) => {
+export const logErrorToFile = async (error: any) => {
+    let _error;
+
     const timestamp = new Date().toUTCString();
-    const logEntry = `${timestamp} - ${error}\n`;
+    // handle error in all forms
+    if (typeof error === "string") {
+        _error = error;
+    } else if (error instanceof Error) {
+        _error = error.stack || error.message;
+    } else {
+        _error = String(error);
+    }
+
+    const logEntry = `${timestamp} - ${_error}\n`;
     const logFile = process.env.LOG_FILE_PATH as string;
 
     try {
         await writeFile(logFile, logEntry);
-        console.log('Error logged successfully');
+        console.log("Error logged successfully");
     } catch (err) {
-        console.error('Failed to write to log file:', err);
+        console.error("Failed to write to log file:", err);
     }
-}
+};
