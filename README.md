@@ -14,12 +14,13 @@ clone the repo and move into the clone folder then install dependencies
 pnpm install
 ```
 
-create `.env` file at the root of the clone folder and add database path
+create `.env` file at the root of the clone folder and add database and log file path
 
-> NOTE: it is advisable to put db file in lib/server of sveltekit project
+> NOTE: it is advisable to put your server side files in lib/server of sveltekit project
 
 ```
 DB_PATH=src/lib/server/the.db
+LOG_FILE_PATH=src/lib/server/the.log
 ```
 
 use migrate command to create the database
