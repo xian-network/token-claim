@@ -84,12 +84,12 @@ export const recordData = async (
     signature: `0x${string}`,
     agreedToTerms: string,
 ): Promise<string | undefined> => {
-    const isOwnerOfBscWallet = await verifySignature(
+    const isSignatureValid = await verifySignature(
         bscWallet,
         xianWallet,
         signature,
     );
-    if (!isOwnerOfBscWallet) return "user is not owner of wallet";
+    if (!isSignatureValid) return "signature is invalid";
 
     const truncAddress = bscWallet.slice(0, 10) + "..." + bscWallet.slice(-9);
 
