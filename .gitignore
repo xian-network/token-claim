@@ -21,4 +21,7 @@ vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
 
 # drizzle
-src/lib/server/db/*.db
+*.db
+
+# logs
+*.log
