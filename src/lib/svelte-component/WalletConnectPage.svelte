@@ -64,7 +64,7 @@
             {/if}
         </div>
     </div>
-    {#if storeXianAddress && $storeIsParticipant}
+    {#if $storeXianAddress && $storeIsParticipant}
         <div class="next-button">
             <div>
                 <button on:click={()=>{storeCurrentPageIndex.set(1)}}>Next</button>
