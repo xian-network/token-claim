@@ -126,7 +126,7 @@ const XianWalletUtils: IXianWalletUtils = {
                     );
                 }
             }, 2000); // 2 seconds timeout
-
+            // dispatches event to Xian extension wallet
             document.dispatchEvent(new CustomEvent("xianWalletGetInfo"));
         });
     },
