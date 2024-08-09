@@ -1,4 +1,4 @@
-import { eq, isNull, sql } from "drizzle-orm";
+import { eq, isNull } from "drizzle-orm";
 import { verifyMessage } from "viem";
 
 import { db } from "./db";
