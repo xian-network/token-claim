@@ -4,6 +4,7 @@
     "private": true,
     "scripts": {
         "dev": "vite dev",
+        "dev:host": "vite --host",
         "build": "vite build",
         "preview": "vite preview",
         "db:generate": "drizzle-kit generate",
