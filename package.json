@@ -17,12 +17,10 @@
         "format": "prettier --write .",
         "test": "vitest"
     },
-    "pnpm": {
-        "overrides": {
-            "intl-messageformat": "10.5.3",
-            "crypto-es": ">=2.1.0",
-            "ws": ">=8.17.1"
-        }
+    "overrides": {
+        "intl-messageformat": "10.5.3",
+        "crypto-es": ">=2.1.0",
+        "ws": ">=8.17.1"
     },
     "devDependencies": {
         "@esbuild-plugins/node-globals-polyfill": "^0.2.3",
