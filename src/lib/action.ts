@@ -51,10 +51,22 @@ export const recordParticipantData = async (
     return await response.json();
 };
 
-export const isPrivateSaleParticipant = async (truncBscWallet: string) => {
+export const isPrivateSaleParticipant = async (bscWallet: string) => {
     const response = await fetch("/api/is-participant", {
         method: "POST",
-        body: JSON.stringify({ truncBscWallet }),
+        body: JSON.stringify({ bscWallet }),
+        headers: {
+            "content-type": "application/json",
+        },
+    });
+
+    return await response.json();
+};
+
+export const isNotSigned = async (bscAddress: string) => {
+    const response = await fetch("/api/is-not-signed", {
+        method: "POST",
+        body: JSON.stringify({ bscAddress }),
         headers: {
             "content-type": "application/json",
         },

@@ -1,112 +1,239 @@
 <script>
-
     import { storeCurrentPageIndex, storeTermsAgreement } from "$lib/store";
-
 </script>
+<div class="heading">3. Terms and Conditions</div>
+
 <div class="scrollable-container">
-    <strong>Terms and Conditions - Crypto Services</strong>
+    <h1>Terms of Service</h1>
 
-    <p>These Terms and Conditions ("Agreement") govern the use of crypto-related services provided by [Your Company Name] ("Provider") to the user ("User"). By accessing or using the crypto services, the User agrees to be bound by this Agreement. If the User does not agree with any part of this Agreement, they should refrain from using the services.</p>
+    <p>Dear Xian Community Members,</p>
 
-    <strong>1. Acceptance of Terms</strong>
+    <h2>1. Introduction</h2>
+    <p>
+        Welcome to Project Xian. These Terms of Service ("Agreement") govern your participation in the Xian ecosystem, including the airdrop of XIAN tokens. By participating, you agree to be bound by the terms outlined herein. If you do not agree with any part of this Agreement, you must refrain from continuing with this token claim process.
+    </p>
 
-    <p>By using the crypto services, the User acknowledges that they have read, understood, and agreed to comply with this Agreement, including any future updates or modifications. The User also agrees to comply with all applicable laws and regulations.</p>
+    <h2>2. AirDrop in Connection with Participatory Stake</h2>
+    <p>
+        The airdrop of XIAN tokens is exclusively offered to active participants of the Lamden & Xian community who commit to contributing a participatory stake within the Project Xian ecosystem. This participatory stake is not an issuance of securities or any form of investment opportunity.
+    </p>
 
-    <strong>2. Crypto Services</strong>
+    <h3>2.1 Purpose of XIAN Tokens</h3>
+    <p>
+        XIAN tokens are intended to enable and secure decentralized access, participation, and contribution within the Xian network. They are not designed to serve as a source of financial appreciation or profit.
+    </p>
 
-    <p>2.1 The Provider offers crypto-related services, including but not limited to crypto wallet management, crypto exchange, and crypto trading.</p>
+    <h3>2.2 Call to Action</h3>
+    <p>
+        The airdrop serves as an invitation for community members to actively participate in building the new Xian network. By accepting the airdrop, you commit to leveraging your experience and contributing to the development and governance of the ecosystem.
+    </p>
 
-    <p>2.2 The User understands that the crypto market is highly volatile, and the Provider does not guarantee any specific financial outcomes. The User agrees to bear all risks associated with crypto transactions.</p>
+    <h2>3. Participatory Requirements</h2>
+    <p>
+        In receiving this token allocation, you agree to engage in the following activities where you are able:
+    </p>
+    <ul>
+        <li>Responding to community polls related to governance and project matters.</li>
+        <li>Staking XIAN tokens to support network security and operations.</li>
+        <li>Drafting, discussing, and submitting governance proposals.</li>
+        <li>Utilizing voting rights to influence governance decisions.</li>
+        <li>Participating in beta testing of new features or updates and providing constructive feedback.</li>
+        <li>Volunteering to assist new and existing members and maintaining a positive community environment.</li>
+        <li>Creating and sharing educational materials to promote blockchain understanding.</li>
+        <li>Contributing to the project's development through feature proposals, bug fixes, or codebase improvements.</li>
+        <li>Participating in hackathons as a participant, mentor, or judge.</li>
+        <li>Enhancing network decentralization and security by running validators or other nodes.</li>
+        <li>Organizing or participating in community events, meetups, and webinars.</li>
+        <li>Supporting global accessibility by translating project materials into various languages.</li>
+    </ul>
 
-    <p>2.3 The User acknowledges that the Provider may impose limitations or restrictions on the use of crypto services, including but not limited to transaction limits, withdrawal limits, or account verification requirements.</p>
+    <h2>4. Key Points Regarding the Airdrop</h2>
 
-    <strong>3. User Responsibilities</strong>
+    <h3>4.1 No Expectation of Profit or Speculative Intent</h3>
+    <p>
+        Receiving XIAN tokens should not be construed as an investment. There is no guarantee that these tokens will hold any financial value. Participants should engage with the airdrop as an opportunity to contribute to the network's development rather than for potential financial gain.
+    </p>
 
-    <p>3.1 The User is solely responsible for maintaining the security and confidentiality of their account credentials, including private keys, passwords, and other authentication information. The User agrees not to share their account information with any third party.</p>
+    <h3>4.2 No Guarantee of Continued Development</h3>
+    <p>
+        Project Xian does not obligate core contributors to continue development in any specific manner. The future growth and development of the Xian network depend entirely on the collective efforts of the community. Project Xian does not guarantee any particular outcomes or the sustained development of the network.
+    </p>
 
-    <p>3.2 The User must ensure that all information provided to the Provider is accurate, complete, and up to date. The User agrees to promptly notify the Provider of any changes to their information.</p>
+    <h3>4.3 Pre-Existing Relationship with Xian</h3>
+    <p>
+        The airdrop is conducted exclusively through the Lamden & Xian forum and channels to ensure it reaches genuine contributors to the Lamden & Xian projects. This approach aims to recognize and reward members who have actively supported the Xian ecosystem and are committed to participating in Xian.
+    </p>
 
-    <p>3.3 The User agrees not to use the crypto services for any illegal, fraudulent, or unauthorized purposes. The User shall comply with all applicable laws, regulations, and guidelines.</p>
+    <h3>4.4 Compliance with Binance Terms of Service</h3>
+    <p>
+        Participation in the Xian token airdrop is restricted to individuals who are not residents or citizens of the following jurisdictions, as listed in Binance's Terms of Service (updated on 27 February 2024):
+    </p>
+    <ul>
+        <li>Canada</li>
+        <li>Netherlands</li>
+        <li>United States</li>
+        <li>Cuba</li>
+        <li>DPRK (North Korea)</li>
+        <li>Iran</li>
+        <li>Syria</li>
+        <li>Crimea region</li>
+        <li>Certain non-government controlled areas of Ukraine</li>
+    </ul>
+    <p>
+        Non-compliance with these restrictions may result in the ineligibility of your participatory stake.
+    </p>
 
-    <strong>4. Intellectual Property</strong>
+    <h2>5. Eligibility and Verification</h2>
+    <p>
+        To qualify for the airdrop, participants must:
+    </p>
+    <ul>
+        <li>Be active members of the Xian community.</li>
+        <li>Commit to the participatory activities outlined in Section 3.</li>
+        <li>Not reside in or hold citizenship within the prohibited jurisdictions listed in Section 4.4.</li>
+    </ul>
 
-    <p>4.1 All intellectual property rights related to the crypto services, including but not limited to trademarks, logos, and software, are the property of the Provider or its licensors. The User agrees not to use, modify, reproduce, or distribute any intellectual property without the explicit consent of the Provider.</p>
+    <h2>6. Termination and Refunds</h2>
+    <p>
+        If you are unable to comply with the eligibility requirements or your participatory stake does not meet the necessary commitments, your stake may be deemed ineligible. In such cases:
+    </p>
+    <ul>
+        <li>Your participatory stake may be adjusted, reduced, or returned to your wallet address.</li>
+        <li>If notified of your inability to comply, any contributions related to the participatory stake will be returned to your wallet address.</li>
+    </ul>
+    <p>
+        These measures are in place to maintain the integrity and compliance of Project Xian and to encourage meaningful participation that benefits the community.
+    </p>
 
-    <strong>5. Termination</strong>
+    <h2>7. Intellectual Property</h2>
+    <p>
+        All intellectual property rights related to Project Xian, including but not limited to trademarks, logos, and software, are the property of the Provider or its licensors. Participants agree not to use, modify, reproduce, or distribute any intellectual property without explicit consent from the Provider.
+    </p>
 
-    <p>5.1 The Provider reserves the right to suspend, terminate, or modify the crypto services at any time, with or without notice, for any reason or no reason. The Provider shall not be liable to the User or any third party for any such modifications, suspensions, or terminations.</p>
+    <h2>8. Limitation of Liability</h2>
+    <p>
+        The Provider shall not be liable for any direct, indirect, incidental, consequential, or exemplary damages arising from participation in the airdrop or use of the Xian network, including but not limited to financial losses, loss of data, or interruption of services.
+    </p>
 
-    <p>5.2 The User may terminate their use of the crypto services at any time by closing their account and ceasing to use the services.</p>
+    <h2>9. Amendments</h2>
+    <p>
+        The Provider reserves the right to modify or update this Agreement at any time. Participants are responsible for regularly reviewing this Agreement to stay informed of any changes. Continued participation in the airdrop or the Xian network after modifications constitutes acceptance of the updated Agreement.
+    </p>
 
-    <strong>6. Disclaimer of Liability</strong>
+    <p>
+        As we continue the development of Project Xian, our commitment remains to create a secure, stable, and decentralized network. The active participation of our community is essential to achieving this vision.
+    </p>
 
-    <p>6.1 The Provider shall not be liable for any direct, indirect, incidental, consequential, or exemplary damages arising from the use or inability to use the crypto services, including but not limited to financial losses, loss of data, or interruption of business.</p>
+    <p>
+        For any questions or further clarification, please reach out to us. Together, let's build an active, vibrant, and collaborative Xian ecosystem.
+    </p>
 
-    <p>6.2 The User acknowledges that the Provider is not responsible for any third-party services, products, or websites linked or integrated with the crypto services. The User agrees to review and accept the terms and policies of any third-party services before using them.</p>
-
-    <strong>7. Governing Law and Jurisdiction</strong>
-
-    <p>This Agreement shall be governed by and construed in accordance with the laws of [Jurisdiction]. Any disputes arising from or relating to this Agreement shall be exclusively subject to the jurisdiction of the courts of [Jurisdiction].</p>
-
-    <strong>8. Amendments</strong>
-
-    <p>The Provider reserves the right to modify or update this Agreement at any time. The User is responsible for regularly reviewing this Agreement to stay informed of any changes. Continued use of the crypto services after any modifications constitutes acceptance of the updated Agreement.</p>
-
-    <p>By using the crypto services, the User acknowledges that they have read and understood this Agreement and agree to be bound by its terms and conditions.</p>
-
-    <p>This document constitutes the entire agreement between the User and the Provider regarding the crypto services.</p>
-
-    <p>Last updated: 6th July 2024</p>
-
+    <p>Last updated: 27 September 2024</p>
     <p>Xian Network</p>
-    <p>[Your Company Address]</p>
-
 </div>
 {#if $storeTermsAgreement === "disagree"}
-    <div>
-        <button on:click={()=>{storeTermsAgreement.set("agree")}}>agree to terms</button>
+    <div class="agree-button">
+        <button on:click={()=>{storeTermsAgreement.set("agree")}}>Agree to Terms</button>
     </div>
 {:else}
     <div style="height: 20.86px;"></div>
 {/if}
 
-<div>
+<div class="nav-button-container">
     {#if $storeTermsAgreement === "agree"}
-        <div class="back-next-button">
-            <div >
-                <button on:click={()=>{storeCurrentPageIndex.set(0)}}>Back</button>
-            </div>
-            <div >
+        <div>
+            <button on:click={()=>{storeCurrentPageIndex.set(0)}}>Back</button>
+        </div>
+            <div>
                 <button on:click={()=>{storeCurrentPageIndex.set(2)}}>Next</button>
             </div>
-        </div>
     {:else}
         <div class="back-button">
-            <div >
+            <div>
                 <button on:click={()=>{storeCurrentPageIndex.set(0)}}>Back</button>
             </div>
         </div>
     {/if}
 </div>
 <style>
-    .scrollable-container {
-        height: 200px; /* Set the fixed height */
-        width: 400px; /*Set the width as needed */
-        overflow-y: auto; /* Enable vertical scrolling */
-        border: 1px solid #ccc; /* Optional: adds a border for visibility */
-        padding: 10px; /* Optional: adds some inner spacing */
+    .heading {
+        width: 100%;
+        max-width: 450px;
+        padding-top: 3rem;
+        padding-bottom: 1rem;
+        text-align: left;
+        font-size: 1.2rem;
+        font-weight: 800;
+        /* text-decoration: underline; */
     }
-    .back-next-button{
-        display: flex;
-        /* flex-direction: column; */
-        justify-content: space-between;
-        width: 400px;
-        
-    }
-    .back-button{
+    .agree-button {
         display: flex;
         flex-direction: column;
-        align-items: flex-start;
-        width: 400px;
+        align-items: center;
+        padding-top: 3rem;
+    }
+    .scrollable-container {
+        height: 400px; /* Increased height for comprehensive terms */
+        width: 100%; /* Adjusted width as needed */
+        max-width: 450px;
+        overflow-y: auto; /* Enable vertical scrolling */
+        border: 1px solid #ccc; /* Adds a border for visibility */
+        padding: 20px; /* Adds inner spacing */
+        background-color: #f9f9f9; /* Optional: background color for readability */
+        font-family: Arial, sans-serif; /* Optional: improved font */
+        font-size: 14px; /* Optional: adjusted font size */
+        line-height: 1.6; /* Optional: improved line spacing */
+        color: #000;
+        text-align: left;
+    }
+    .scrollable-container h1 {
+        text-align: left;
+        margin-bottom: 20px;
+        color: #000;
+
+    }
+    .scrollable-container h2 {
+        margin-top: 20px;
+        color: #000;
+    }
+    .scrollable-container h3 {
+        margin-top: 15px;
+        color: #000;
+    }
+    .scrollable-container ul {
+        margin-left: 20px;
+    }
+    .nav-button-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        min-width: 450px;
+        max-width: 450px;
+        margin-top: 20px;
+        padding-bottom: 10rem;
+    }
+    .next-button, .back-button {
+        max-width: 100px;
+        margin-top: 20px;
+    }
+    /* .back-button {
+        justify-content: flex-start;
+    }
+    /* button {
+        padding: 10px 20px;
+        background-color: #007BFF;
+        border: none;
+        color: white;
+        cursor: pointer;
+        border-radius: 4px;
+        font-size: 14px;
+    } */
+    button:hover {
+        background-color: #0056b3;
+    }
+
+    p {
+        color: #000;
     }
 </style>

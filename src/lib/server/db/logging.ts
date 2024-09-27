@@ -15,7 +15,7 @@ export const logErrorToFile = async (error: any) => {
     }
 
     const logEntry = `${timestamp} - ${_error}\n`;
-    const logFile = process.env.LOG_FILE_PATH as string;
+    const logFile = process.env.LOG_FILE_PATH || './log' as string;
 
     try {
         await writeFile(logFile, logEntry);

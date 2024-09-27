@@ -5,13 +5,14 @@ import { db } from "./db";
 import { logErrorToFile } from "./logging";
 import { participantTable } from "./schema";
 
-export const isParticipant = async (truncWallet: string): Promise<boolean> => {
+export const isParticipant = async (bscWallet: string): Promise<boolean> => {
     const result = await db
         .select()
         .from(participantTable)
-        .where(eq(participantTable.bscAddress, truncWallet))
+        .where(eq(participantTable.bscAddress, bscWallet.toLowerCase()))
         .limit(1)
         .catch(async (err) => {
+            console.log({err})
             await logErrorToFile(err);
             return [];
         });
@@ -24,14 +25,14 @@ export const isParticipant = async (truncWallet: string): Promise<boolean> => {
 };
 
 export const participantTokenAmount = async (
-    truncWallet: string,
+    bscWallet: string,
 ): Promise<{ amountToReceive: number | null }[]> => {
     const result = await db
         .select({
             amountToReceive: participantTable.amountToReceive,
         })
         .from(participantTable)
-        .where(eq(participantTable.bscAddress, truncWallet))
+        .where(eq(participantTable.bscAddress, bscWallet.toLowerCase()))
         .limit(1)
         .catch(async (err) => {
             await logErrorToFile(err);
@@ -41,13 +42,13 @@ export const participantTokenAmount = async (
     return result;
 };
 
-export const isNotSigned = async (truncWallet: string): Promise<boolean> => {
+export const isNotSigned = async (bscAddress: string): Promise<boolean> => {
     const result = await db
         .select({
             isSignatureNull: isNull(participantTable.signature),
         })
         .from(participantTable)
-        .where(eq(participantTable.bscAddress, truncWallet))
+        .where(eq(participantTable.bscAddress, bscAddress))
         .limit(1)
         .catch(async (err) => {
             await logErrorToFile(err);
@@ -91,14 +92,12 @@ export const recordData = async (
     );
     if (!isSignatureValid) return "signature is invalid";
 
-    const truncAddress = bscWallet.slice(0, 10) + "..." + bscWallet.slice(-9);
-
     if (agreedToTerms === "disagree")
         return "participant do not agree to terms";
 
-    const isElegible = await isParticipant(truncAddress);
+    const isElegible = await isParticipant(bscWallet);
 
-    const _isNotSigned = await isNotSigned(truncAddress);
+    const _isNotSigned = await isNotSigned(bscWallet);
 
     if (isElegible) {
         if (_isNotSigned) {
@@ -111,7 +110,7 @@ export const recordData = async (
                     signature: signature,
                     agreedToTerms: agreedToTerms,
                 })
-                .where(eq(participantTable.bscAddress, truncAddress))
+                .where(eq(participantTable.bscAddress, bscWallet.toLowerCase()))
                 .catch(async (err) => {
                     await logErrorToFile(err);
                     return "signing unsuccessful";

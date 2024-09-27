@@ -22,6 +22,7 @@ const XianWalletUtils: IXianWalletUtils = {
 
     // Initialize listeners to resolve promises and set RPC URL
     init: function (rpcUrl) {
+        console.log("XianWalletUtils is running")
         if (this.initialized) {
             console.warn(
                 "XianWalletUtils is already initialized. Avoiding re-initialization.",
@@ -105,7 +106,7 @@ const XianWalletUtils: IXianWalletUtils = {
                             resolve(); // Resolve anyway to not block the flow
                         }
                     }
-                }, 2000); // 2 seconds timeout
+                }, 500); // 2 seconds timeout
             }
         });
     },

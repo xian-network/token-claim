@@ -1,0 +1,11 @@
+/* @import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities"; */
+
+    a {
+        color: #f2f2f2;
+        text-decoration: underline;
+      }
+      a:active {
+        color: #f2f2f2;
+      }
