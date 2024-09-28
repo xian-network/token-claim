@@ -48,6 +48,9 @@
     const disconnectBSCWallet = () => {
         onboard.disconnectWallet({ label: $wallets$?.[0]?.label });
         storeBscAddress.set("0x");
+        storeIsParticipant.set(false);
+        storeParticipantTokens.set(0);
+        storeIsNotSigned.set(true);
     };
 </script>
 
