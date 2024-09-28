@@ -115,7 +115,7 @@
             {/if}
         </div>
     </div>
-    {#if $xianWalletState?.address && $storeIsParticipant}
+    {#if $xianWalletState?.address && $storeParticipantTokens}
         <div class="next-button">
             <div>
                 <button
