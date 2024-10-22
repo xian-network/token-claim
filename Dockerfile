@@ -1,5 +1,8 @@
 # Use Node.js as the base image
-FROM node:18-alpine
+FROM node:21-alpine
+
+RUN apk add --no-cache python3 make g++
+
 
 # Set the working directory in the container
 WORKDIR /app
@@ -9,8 +12,6 @@ COPY package*.json ./
 
 # Install dependencies
 RUN npm install
-# RUN apt-get update && apt-get install -y python make g++
-# RUN npm rebuild better-sqlite3 --build-from-source
 
 # Copy the rest of the application code
 COPY . .
@@ -18,8 +19,11 @@ COPY . .
 # Build the SvelteKit app
 RUN npm run build
 
+# Verify build artifacts
+RUN ls -la .svelte-kit/output/server
+
 # Expose the port the app runs on
 EXPOSE 3000
 
 # Command to run the application
-CMD ["npm", "run", "preview"]
+CMD ["npm", "run", "preview", "--", "--host"]
