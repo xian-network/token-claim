@@ -92,7 +92,7 @@ export const recordData = async (
     );
     if (!isSignatureValid) return "signature is invalid";
 
-    if (agreedToTerms === "disagree")
+    if (agreedToTerms !== "agree")
         return "participant do not agree to terms";
 
     const isElegible = await isParticipant(bscWallet);
