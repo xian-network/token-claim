@@ -76,7 +76,7 @@
 <main class="main">
     <Toasts position="top-center" />
     <img id="xian-logo" src="/images/xian-white.svg" alt="xian logo">
-    <h1>Xian RCNET Token Claim</h1>
+    <h1>Xian RCNET Seed Token Claim</h1>
     <svelte:component this={currentPage} />
 </main>
 
