@@ -27,10 +27,10 @@ const chains = [
 ];
 
 const appMetadata = {
-    name: "Web3-Onboard Svelte Demo",
+    name: "XIAN Seed Token Claim",
     icon: "<svg />",
     logo: "<svg />",
-    description: "Demo using Onboard",
+    description: "Claim your XIAN Seed Token",
     recommendedInjectedWallets: [
         { name: "Coinbase", url: "https://wallet.coinbase.com/" },
         { name: "MetaMask", url: "https://metamask.io" },
