@@ -12,7 +12,7 @@ export const isParticipant = async (bscWallet: string): Promise<boolean> => {
         .where(eq(participantTable.bscAddress, bscWallet.toLowerCase()))
         .limit(1)
         .catch(async (err) => {
-            console.log({err})
+            console.log({ err })
             await logErrorToFile(err);
             return [];
         });
@@ -33,13 +33,15 @@ export const participantTokenAmount = async (
         })
         .from(participantTable)
         .where(eq(participantTable.bscAddress, bscWallet.toLowerCase()))
-        .limit(1)
+        .limit(100)
         .catch(async (err) => {
             await logErrorToFile(err);
             return [];
         });
-
-    return result;
+        console.log({result})
+        const amountToReceive = result.reduce((acc, curr: any) => acc + curr.amountToReceive, 0);
+        console.log(amountToReceive)
+        return [{amountToReceive}];
 };
 
 export const isNotSigned = async (bscAddress: string): Promise<boolean> => {
