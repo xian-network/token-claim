@@ -19,9 +19,6 @@ COPY . .
 # Build the SvelteKit app
 RUN npm run build
 
-# Verify build artifacts
-RUN ls -la .svelte-kit/output/server
-
 # Expose the port the app runs on
 EXPOSE 3000
 
