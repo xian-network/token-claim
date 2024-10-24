@@ -8,4 +8,5 @@ export const participantTable = sqliteTable("participants", {
     signature: text("signature"), // Allows NULL
     amountToReceive: real("amount_to_receive"), // Allows NULL
     agreedToTerms: text("agreed_to_terms"), // Allows NULL
+    paid: integer("paid"), // Allows NULL
 });
