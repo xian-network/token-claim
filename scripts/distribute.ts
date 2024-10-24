@@ -49,7 +49,7 @@ export async function distribute_tokens(pending_contributions: any, db: any) {
 
     for (const key of Object.keys(total_to_xian_address)) {
         addresses.push(key)
-        amounts.push(total_to_xian_address[key] / 1000)
+        amounts.push(total_to_xian_address[key])
     }
 
     console.log({addresses, amounts})
